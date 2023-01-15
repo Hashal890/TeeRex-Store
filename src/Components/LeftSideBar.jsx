@@ -18,7 +18,8 @@ const LeftSideBar = () => {
   };
 
   useEffect(() => {
-    console.log(filters);
+    // console.log(filters);
+    
   }, [filters]);
 
   return (
@@ -27,6 +28,8 @@ const LeftSideBar = () => {
       px={8}
       py={4}
       w={"350px"}
+      h={"fit-content"}
+      m={["0", "auto", "0", "0"]}
     >
       <Box>
         <Text fontWeight={700} fontSize={"18px"}>

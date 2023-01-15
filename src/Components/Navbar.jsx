@@ -28,23 +28,28 @@ export default function Navbar() {
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Link to={"/"}>TeeRex Store</Link>
-        <IconButton
-          size={"md"}
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          aria-label={"Open Menu"}
-          display={{ md: "none" }}
-          onClick={isOpen ? onClose : onOpen}
-        />
+        <Box display={{ md: "none" }}>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            onClick={isOpen ? onClose : onOpen}
+            mr={2}
+          />
+          <Button onClick={toggleColorMode} colorScheme={"teal"}>
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
+        </Box>
         <HStack gap={3} display={{ base: "none", md: "flex" }}>
           <Link to={"/"}>Products</Link>
           <Link to={"/cart"}>
             <IconButton
               aria-label="Cart Page"
               icon={<AiOutlineShoppingCart />}
-              colorScheme={"purple"}
+              colorScheme={"telegram"}
             />
           </Link>
-          <Button onClick={toggleColorMode} colorScheme={"orange"}>
+          <Button onClick={toggleColorMode} colorScheme={"teal"}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
         </HStack>

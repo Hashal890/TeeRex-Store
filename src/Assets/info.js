@@ -16,6 +16,7 @@ export const NavbarLinks = [
 export const initState = {
   realData: data,
   updatedData: data,
+  cartData: [],
 };
 
 export const initFilter = {

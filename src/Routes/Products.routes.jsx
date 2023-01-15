@@ -1,13 +1,23 @@
 import React, { useContext } from "react";
-import { Box, Flex, HStack, IconButton, Input } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  Input,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import { AppContext } from "../Context/AppContext";
 import { ImSearch } from "react-icons/im";
 import LeftSideBar from "../Components/LeftSideBar";
+import ProductCard from "../Components/ProductCard";
 
 const Products = () => {
-  const { state, updateState } = useContext(AppContext);
+  const { state, setState } = useContext(AppContext);
 
-  // console.log(state, updateState);
+  const { realData, updatedData } = state;
+
+  // console.log(state, setState);
 
   return (
     <Box px={[2, 0, 4, 20]}>
@@ -24,12 +34,18 @@ const Products = () => {
         />
       </HStack>
       <Flex
-        flexDir={["column", "column", "column", "row"]}
+        flexDir={["column", "column", "row", "row"]}
         m={"auto"}
-        justifyContent={"center"}
-        alignItems={"center"}
+        // justifyContent={"center"}
+        // alignItems={"center"}
+        gap={8}
       >
         <LeftSideBar />
+        <SimpleGrid columns={[1, 2, 2, 3]} gap={4} mb={4} px={4}>
+          {updatedData.map((el) => (
+            <ProductCard key={el.id} {...el} />
+          ))}
+        </SimpleGrid>
       </Flex>
     </Box>
   );

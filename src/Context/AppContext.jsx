@@ -8,12 +8,12 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [state, setState] = useState(initState);
 
-  const updateState = (newData) => {
-    setState({ ...initState, updatedData: newData });
-  };
+  // const updateState = (newData) => {
+  //   setState(newData);
+  // };
 
   return (
-    <AppContext.Provider value={{ state, updateState }}>
+    <AppContext.Provider value={{ state, setState }}>
       {children}
     </AppContext.Provider>
   );

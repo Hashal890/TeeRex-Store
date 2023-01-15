@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   Box,
   Flex,
@@ -14,10 +14,31 @@ import ProductCard from "../Components/ProductCard";
 
 const Products = () => {
   const { state, setState } = useContext(AppContext);
+  const [searchText, setSearchText] = useState("");
 
   const { realData, updatedData } = state;
 
   // console.log(state, setState);
+  // console.log(searchText.toLowerCase());
+
+  const searchData = () => {
+    // console.log("inside");
+    const data = realData.filter((el) => {
+      let sampleArr = Object.values(el);
+      let isPresent = false;
+      for (let index = 0; index < sampleArr.length; index++) {
+        const element = sampleArr[index].toString();
+        // console.log(element);
+        if (element.toLowerCase() === searchText.toLowerCase()) {
+          isPresent = true;
+          break;
+        }
+      }
+      if (isPresent) return el;
+    });
+    // console.log(data, "data");
+    setState({...state, updatedData: data});
+  };
 
   return (
     <Box px={[2, 0, 4, 20]}>
@@ -26,11 +47,13 @@ const Products = () => {
           placeholder={"Search for products..."}
           maxW={"400px"}
           variant="flushed"
+          onChange={(e) => setSearchText(e.target.value)}
         />
         <IconButton
           aria-label="Cart Page"
           icon={<ImSearch />}
           colorScheme={"twitter"}
+          onClick={searchData}
         />
       </HStack>
       <Flex

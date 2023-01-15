@@ -10,6 +10,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { NavbarLinks } from "../Assets/info";
 
@@ -35,10 +36,15 @@ export default function Navbar() {
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack gap={3} display={{ base: "none", md: "flex" }}>
-          <Link to={"/"}>
-            Products
+          <Link to={"/"}>Products</Link>
+          <Link to={"/cart"}>
+            <IconButton
+              aria-label="Cart Page"
+              icon={<AiOutlineShoppingCart />}
+              colorScheme={"purple"}
+            />
           </Link>
-          <Button onClick={toggleColorMode}>
+          <Button onClick={toggleColorMode} colorScheme={"orange"}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
         </HStack>

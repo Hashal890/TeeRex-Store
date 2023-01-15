@@ -1,12 +1,7 @@
 import { createContext, useState } from "react";
-import data from "../Assets/data.json";
+import { initState } from "../Assets/info";
 
 export const AppContext = createContext();
-
-const initState = {
-  realData: data,
-  updatedData: data,
-};
 
 // console.log("data", data);
 

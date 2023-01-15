@@ -1,4 +1,9 @@
-import { Box, Checkbox, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Checkbox,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { initFilter } from "../Assets/info";
 
@@ -19,7 +24,6 @@ const LeftSideBar = () => {
 
   useEffect(() => {
     // console.log(filters);
-    
   }, [filters]);
 
   return (
@@ -27,7 +31,7 @@ const LeftSideBar = () => {
       boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
       px={8}
       py={4}
-      w={"350px"}
+      w={"300px"}
       h={"fit-content"}
       m={["0", "auto", "0", "0"]}
     >

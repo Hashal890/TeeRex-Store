@@ -11,6 +11,7 @@ import { AppContext } from "../Context/AppContext";
 import { ImSearch } from "react-icons/im";
 import LeftSideBar from "../Components/LeftSideBar";
 import ProductCard from "../Components/ProductCard";
+import FiltersModal from "../Components/FiltersModal";
 
 const Products = () => {
   const { state, setState } = useContext(AppContext);
@@ -37,7 +38,7 @@ const Products = () => {
       if (isPresent) return el;
     });
     // console.log(data, "data");
-    setState({...state, updatedData: data});
+    setState({ ...state, updatedData: data });
   };
 
   return (
@@ -55,6 +56,7 @@ const Products = () => {
           colorScheme={"twitter"}
           onClick={searchData}
         />
+        <FiltersModal />
       </HStack>
       <Flex
         flexDir={["column", "column", "row", "row"]}
@@ -63,8 +65,10 @@ const Products = () => {
         // alignItems={"center"}
         gap={8}
       >
-        <LeftSideBar />
-        <SimpleGrid columns={[1, 2, 2, 3]} gap={4} mb={4} px={4}>
+        <Box display={{ base: "none", md: "block" }}>
+          <LeftSideBar />
+        </Box>
+        <SimpleGrid columns={[1, 2, 1, 2, 3]} gap={4} mb={4} px={4}>
           {updatedData.map((el) => (
             <ProductCard key={el.id} {...el} />
           ))}

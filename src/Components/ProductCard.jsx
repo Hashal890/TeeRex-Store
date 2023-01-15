@@ -53,14 +53,9 @@ const ProductCard = ({ id, imageURL, name, price, color, gender }) => {
           Add To Cart
         </Button>
       </HStack>
-      <HStack mt={4}>
-        <Text>Avaiable for {gender.toLowerCase()} in</Text>
-        <Text color={color.toLowerCase()} fontWeight={"bold"}>
-          {" "}
-          {color.toLowerCase()}
-        </Text>
-        <Text> colour.</Text>
-      </HStack>
+      <Text mt={4}>
+        Avaiable for {gender.toLowerCase()} in {color.toLowerCase()} colour.
+      </Text>
     </Box>
   );
 };

@@ -68,7 +68,7 @@ const Products = () => {
         <Box display={{ base: "none", md: "block" }}>
           <LeftSideBar />
         </Box>
-        <SimpleGrid columns={[1, 2, 1, 2, 3]} gap={4} mb={4} px={4}>
+        <SimpleGrid columns={[1, 2, 2, 3]} gap={4} mb={4} px={4}>
           {updatedData.map((el) => (
             <ProductCard key={el.id} {...el} />
           ))}

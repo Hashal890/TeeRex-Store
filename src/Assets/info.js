@@ -21,10 +21,10 @@ export const initState = {
 };
 
 export const initFilter = {
-  colorFilter: { red: false, green: false, blue: false },
-  genderFilter: { men: false, women: false },
+  colorFilter: { Red: false, Green: false, Blue: false },
+  genderFilter: { Men: false, Women: false },
   priceFilter: { 250: false, 251: false, 450: false },
-  typeFilter: { polo: false, hoodie: false, basic: false },
+  typeFilter: { Polo: false, Hoodie: false, Basic: false },
 };
 
 export const INCREMENT = "INCREMENT_ITEM";

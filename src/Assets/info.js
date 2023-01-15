@@ -17,6 +17,7 @@ export const initState = {
   realData: data,
   updatedData: data,
   cartData: [],
+  total: 0,
 };
 
 export const initFilter = {
@@ -25,3 +26,7 @@ export const initFilter = {
   priceFilter: { 250: false, 251: false, 450: false },
   typeFilter: { polo: false, hoodie: false, basic: false },
 };
+
+export const INCREMENT = "INCREMENT_ITEM";
+export const DECREMENT = "DECREMENT_ITEM";
+export const DELETE = "DELETE_ITEM";

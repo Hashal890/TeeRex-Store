@@ -11,14 +11,15 @@ const ProductCard = ({ id, imageURL, name, price, color, gender }) => {
     // console.log(newItem[0]);
     let isPresent = state.cartData.filter((el) => el.id === id);
     if (isPresent.length === 0) {
-    //   console.log("inside 0");
+      //   console.log("inside 0");
       setState({
         ...state,
         cartData: [...state.cartData, { ...newItem[0], qty: 1 }],
+        total: state.total + price,
       });
     } else {
-    //   console.log("final");
-    //   console.log("hello", isPresent[0]["qty"] + 1, isPresent[0]["quantity"]);
+      //   console.log("final");
+      //   console.log("hello", isPresent[0]["qty"] + 1, isPresent[0]["quantity"]);
       let data = state.cartData.filter((el) => el.id !== id);
       setState({
         ...state,

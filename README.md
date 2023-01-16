@@ -1,10 +1,10 @@
-# Background
+## TeeRex Store
 
-### King Shan wants to start a t-shirt business, where he sells t-shirts online. To run his business, he needs a simple webapp where customers can browse through the catalog of t-shirts, add t-shirts to the shopping cart and checkout the items in the cart.
+#### King Shan wants to start a t-shirt business, where he sells t-shirts online. To run his business, he needs a simple webapp where customers can browse through the catalog of t-shirts, add t-shirts to the shopping cart and checkout the items in the cart.
 
-# Task
+## Task
 
-### Your job is to build a simple UI, which allows a customer to do the following:-
+#### Your job is to build a simple UI, which allows a customer to do the following:-
 
 - Browse the catalog on a product listing page
 - Each card should have the image, name and price.
@@ -23,7 +23,7 @@
 - Increase quantity or delete items from the shopping cart
 - Display the total amount in the shopping cart.
 
-# Rules
+## Rules
 
 - Every t-shirt type has a limited quantity. If the customer tries to order more than the available quantity, an error message should appear.
 - Filter can be applied by itself or on top of the search results.
@@ -34,3 +34,12 @@
 - There is no need to handle pagination.
 - There is no need to implement user registration / login.
 - [API](https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json) link (GET request)
+
+## Connect with author
+
+- [Twitter](https://twitter.com/harshal258)
+- [LinkdIn](https://www.linkedin.com/in/harshalpardeshi/)
+
+## Feedback
+
+If you have any feedback or queries, please reach out to me at pardeshiharshal90@gmail.com.

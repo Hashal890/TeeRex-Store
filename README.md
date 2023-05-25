@@ -34,3 +34,21 @@
 - There is no need to handle pagination.
 - There is no need to implement user registration / login.
 - [API](https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json) link (GET request)
+
+# Screenshots
+
+### 1. Products Page
+
+![Products Page](./src/Assets/homePage.png)
+
+### 2. Search Results
+
+![Search Results](./src/Assets/search.png)
+
+### 3. Filter Options
+
+![Filter Options](./src/Assets/filter.png)
+
+### 4. Cart Page
+
+![Cart Page](./src/Assets/cartPage.png)
